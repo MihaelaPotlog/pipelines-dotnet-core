@@ -14,11 +14,10 @@ stages:
   jobs:
   - job: A
     steps:
-    - task 
-- task: Docker@2
-  inputs:
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    containerRegistry: registrylearnconn
+    - task: Docker@2
+      inputs:
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        containerRegistry: registrylearnconn
 
 
