@@ -19,5 +19,10 @@ stages:
         containerregistrytype: 'Azure Container Registry'
         dockerComposeFile: '**/docker-compose.yml'
         action: 'Build services'
+    - task: DockerCompose@0
+      inputs:
+        containerregistrytype: 'Azure Container Registry'
+        dockerComposeFile: '**/docker-compose.yml'
+        action: 'Push services'
 
 
