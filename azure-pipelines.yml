@@ -14,10 +14,10 @@ stages:
   jobs:
   - job: A
     steps:
-    - task: Docker@2
+    - task: DockerCompose@0
       inputs:
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        containerRegistry: registrylearnconn
+        containerregistrytype: 'Azure Container Registry'
+        dockerComposeFile: '**/docker-compose.yml'
+        action: 'Build services'
 
 
