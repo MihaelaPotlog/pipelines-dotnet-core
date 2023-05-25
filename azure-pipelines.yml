@@ -17,8 +17,10 @@ stages:
     - task: DockerCompose@0
       inputs:
         containerregistrytype: 'Azure Container Registry'
+        dockerRegistryEndpoint: 'registrylearn.azurecr.io'
         dockerComposeFile: '**/docker-compose.yml'
         action: 'Build services'
+
     - task: DockerCompose@0
       inputs:
         containerregistrytype: 'Azure Container Registry'
